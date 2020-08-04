@@ -23,7 +23,7 @@ console.log('mutated original: ', a);
 ```
 
 **Output**
-```json
+```
 original:  { a: 1, b: 2, asdf: [ 'a', 'b', 1, 3 ] }
 
 immutate return:  { a: 1,
