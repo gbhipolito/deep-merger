@@ -1,11 +1,17 @@
 const clone = (toObj, fromObj) => {
   if (fromObj.constructor === Array) {
-    // if they're array, just push values of fromObj to toObj
-    for (let fromIdx = 0; fromIdx < fromObj.length; fromIdx++) {
-      if (!toObj.includes(fromObj[fromIdx])) {
-        toObj.push(fromObj[fromIdx]);
-      }
-    }
+    /* if they're array, just push values of fromObj to toObj */
+    // for (let fromIdx = 0; fromIdx < fromObj.length; fromIdx++) {
+    //   if (!toObj.includes(fromObj[fromIdx])) {
+    //     toObj.push(fromObj[fromIdx]);
+    //   }
+    // }
+
+    /* replace array, don't merge */
+    console.log('replace', toObj, 'with', fromObj)
+    toObj.length = 0;
+    toObj.push(...fromObj);
+    
   } else if (fromObj.constructor === Object) {
     // if they're object, deep clone via recursion
 

@@ -1,8 +1,15 @@
 {
   "name": "deep-merger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility for deep merging objects",
-  "keywords": ["deep", "merge", "clone", "object", "array", "copy"],
+  "keywords": [
+    "deep",
+    "merge",
+    "clone",
+    "object",
+    "array",
+    "copy"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
