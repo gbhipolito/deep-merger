@@ -8,7 +8,7 @@ const clone = (toObj, fromObj) => {
     // }
 
     /* replace array, don't merge */
-    console.log('replace', toObj, 'with', fromObj)
+    // console.log('replace', toObj, 'with', fromObj)
     toObj.length = 0;
     toObj.push(...fromObj);
     
