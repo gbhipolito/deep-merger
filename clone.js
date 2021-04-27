@@ -20,6 +20,8 @@ const clone = (toObj, fromObj) => {
     for (let keyIdx = 0; keyIdx < fromObjKeys.length; keyIdx++) {
       const fromObjKey = fromObjKeys[keyIdx];
 
+      if (isPrototypePolluted(fromObjKey)) continue;
+
       if (toObj[fromObjKey] && fromObj[fromObjKey] // both of them has values
         && typeof toObj[fromObjKey] === 'object' && typeof fromObj[fromObjKey] === 'object' // both of them type object
         && ((toObj[fromObjKey].constructor === Object && fromObj[fromObjKey].constructor === Object) // both of them really Object
@@ -33,5 +35,7 @@ const clone = (toObj, fromObj) => {
 
   return toObj;
 };
+
+const isPrototypePolluted = (key) => ['__proto__', 'constructor', 'prototype'].includes(key);
 
 module.exports = clone;
